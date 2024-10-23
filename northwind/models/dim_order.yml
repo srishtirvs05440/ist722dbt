@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: dim_order
+    description: Order Dimension. One row per order
+    columns:
+      - name: orderkey
+        description: The surrogate key of the order
+        tests:
+          - not_null
+          - unique
+      - name: orderid
+        description: The business / source key of the order
+        tests:
+          - not_null
+          - unique

@@ -51,7 +51,12 @@ sources:
         columns:
           - name: OrderId
             tests:
-              - unique                                                  
+              - unique
+      - name: Territories
+        columns:
+          - name: TerritoryID
+            tests:
+              - unique                                                
       - name: Order_Details
         tests:
         - dbt_utils.unique_combination_of_columns:
