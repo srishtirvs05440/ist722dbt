@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: dim_order_details
+    description: Order Details Dimension. One row per Order Details
+    columns:
+      - name: orderkey
+        description: The surrogate key of the Order Details
+        tests:
+          - not_null
+          - unique
+      

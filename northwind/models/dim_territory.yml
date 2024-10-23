@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: dim_territory
+    description: Territory Dimension. One row per territory
+    columns:
+      - name: territorykey
+        description: The surrogate key of the territory
+        tests:
+          - not_null
+          - unique
+      - name: territoryid
+        description: The business / source key of the territory
+        tests:
+          - not_null
+          - unique

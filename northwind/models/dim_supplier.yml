@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: dim_supplier
+    description: Supplier Dimension. One row per supplier
+    columns:
+      - name: supplierkey
+        description: The surrogate key of the supplier
+        tests:
+          - not_null
+          - unique
+      - name: supplierid
+        description: The business / source key of the supplier
+        tests:
+          - not_null
+          - unique
